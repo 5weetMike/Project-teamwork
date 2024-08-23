@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberPet</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chewy&display=swap"> 
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="start-screen">
+        <h1>CyberPet</h1>
+        <button id="start-game">Start Game</button>
+    </div>
+    <div class="game-screen" style="display: none;">
+        <h1 id="pet-name">Pet Name</h1>
+        
+        <div class="stat-bar health">
+            <label>Health:</label>
+            <div class="bar">
+                <div class="progress" id="health-bar" style="width: 100%;"></div>
+            </div>
+        </div>
+        
+        <div class="stat-bar thirst">
+            <label>Thirst:</label>
+            <div class="bar">
+                <div class="progress" id="thirst-bar" style="width: 100%;"></div>
+            </div>
+        </div>
+        
+        <div class="stat-bar feed">
+            <label>Feed:</label>
+            <div class="bar">
+                <div class="progress" id="feed-bar" style="width: 100%;"></div>
+            </div>
+        </div>
+        
+        <div class="stat-bar sleep">
+            <label>Sleep:</label>
+            <div class="bar">
+                <div class="progress" id="sleep-bar" style="width: 100%;"></div>
+            </div>
+        </div>
+        
+        <div class="actions">
+            <button onclick="feedPet()">Feed</button>
+            <button onclick="giveDrink()">Give Drink</button>
+            <button onclick="putToSleep()">Sleep</button>
+        </div>
+    </div>
+    
+    <div class="character-select" style="display: none;">
+        <h1>Select Your Pet</h1>
+        <input type="text" id="username" placeholder="Enter your name">
+        <div class="character-container">
+            <div class="character" onclick="selectCharacter('tiger')">
+                <img src="tiger.png" alt="Tiger">
+                <p>Tiger</p>
+            </div>
+            <div class="character" onclick="selectCharacter('bear')">
+                <img src="bear.png" alt="Bear">
+                <p>Bear</p>
+            </div>
+            <div class="character" onclick="selectCharacter('dog')">
+                <img src="dog.png" alt="Dog">
+                <p>Dog</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
