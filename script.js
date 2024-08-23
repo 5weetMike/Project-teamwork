@@ -59,4 +59,5 @@ function putToSleep() {
     updateBars();
 }
 
-const gameInterval = setInterval(decreaseStats, 1000);
+// const gameInterval = setInterval(decreaseStats, 1000);
+const gameInterval = setInterval(decreaseStats, 200);
